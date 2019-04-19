@@ -1,5 +1,100 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+head
+  title Cyph.er - Encyphering and Decyphering made Easy
+  link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+  script(src='/javascripts/javascript.js')
+header
+  h1 Welcome to Cyph.er - Encyphering and Decyphering made Easy
+#overlay(onclick='overlayOff()')
+  #overlay-text
+.top-left
+  h3 ROT-N Cypher
+  | &#x9;&#x9;Uncyphered Message:
+  br
+  textarea#decypheredRotText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;&#x25BC;
+  button(onclick='encypherRotButton()') Encypher
+  select#rotSelect
+    option(value='1') 1
+    option(value='2') 2
+    option(value='3') 3
+    option(value='4') 4
+    option(value='5') 5
+    option(value='6') 6
+    option(value='7') 7
+    option(value='8') 8
+    option(value='9') 9
+    option(value='10') 10
+    option(value='11') 11
+    option(value='12') 12
+    option(value='13' selected='') 13
+    option(value='14') 14
+    option(value='15') 15
+    option(value='16') 16
+    option(value='17') 17
+    option(value='18') 18
+    option(value='19') 19
+    option(value='20') 20
+    option(value='21') 21
+    option(value='22') 22
+    option(value='23') 23
+    option(value='24') 24
+    option(value='25') 25
+  button(onclick='decypherRotButton()') Decypher
+  | &#x25B2;
+  br
+  textarea#encypheredRotText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;Encyphered Message:
+.top-right
+  h3 Keyboard Cypher
+  | &#x9;&#x9;Uncyphered Message:
+  br
+  textarea#decypheredKeyboardText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;&#x25BC;
+  button(onclick='encypherKeyboardButton()') Encypher
+  select#keyboardSelect
+    option(value='left' selected='') Left
+    option(value='right') Right
+  button(onclick='decypherKeyboardButton()') Decypher
+  | &#x25B2;
+  br
+  textarea#encypheredKeyboardText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;Encyphered Message:
+.bottom-left
+  h3 A1Z26 Cypher
+  | &#x9;&#x9;Uncyphered Message:
+  br
+  textarea#decypheredA1Z26Text(rows='3' cols='27')
+  br
+  | &#x9;&#x9;&#x25BC;
+  button(onclick='encypherA1Z26Button()') Encypher
+  button(onclick='decypherA1Z26Button()') Decypher
+  | &#x25B2;
+  br
+  textarea#encypheredA1Z26Text(rows='3' cols='27')
+  br
+  | &#x9;&#x9;Encyphered Message:
+.bottom-right
+  h3 QWERTY Cypher
+  | &#x9;&#x9;Uncyphered Message:
+  br
+  textarea#decypheredQwertyText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;&#x25BC;
+  button(onclick='encypherQwertyButton()') Encypher
+  button(onclick='decypherQwertyButton()') Decypher
+  | &#x25B2;
+  br
+  textarea#encypheredQwertyText(rows='3' cols='27')
+  br
+  | &#x9;&#x9;Encyphered Message:
+.footer
+  a(onclick='about()' href='javascript:void(0);') About
+  |  - 
+  a(onclick='contactUs()' href='javascript:void(0);') Contact Us
+  |  - 
+  a(onclick='user()' href='javascript:void(0);') User
