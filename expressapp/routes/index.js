@@ -34,6 +34,6 @@ router.post('/', function(req, res) {
 		
 		console.log('Data inserted');
 	});
-}
+});
 
 module.exports = router;
